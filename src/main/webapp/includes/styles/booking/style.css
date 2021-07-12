@@ -1,0 +1,194 @@
+.container{
+    background-color: #fff;
+    height: 667px;
+    width: 375px;
+}
+.header{
+    /*background-color: #009FCC;*/
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+.header-date{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 15px;
+    border: 1px solid #eee;
+    height: 32px;
+    width: 200px;
+    /*color:#00DDDD;*/
+}
+.pickdate{
+    width: 100%;
+    line-height: 26px;
+    vertical-align: middle;
+    font-size: 16px;
+    margin-left: 5px;
+    border: 0;
+    background: #eee;
+    /*border: 1px solid gray;*/
+}
+.header-floor{
+    display: inline-block;
+    border: 1px solid #eee;
+    margin-left: 10px;
+    margin-top: 15px;
+    height: 32px;
+    width: 120px;
+    /*color:#00DDDD;*/
+}
+.pickfloor{
+    line-height: 26px;
+    vertical-align: middle;
+    font-size: 16px;
+    margin-left: 5px;
+    border: 0;
+    background: #eee;
+}
+.region {
+    background-color: #fff;
+    margin-top: 60px;
+}
+.region-conston{
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    padding-left:30px;
+}
+.region-conston .fault{
+    background-color:#c6c6c6;
+}
+.region-conston .choosen{
+    background-color:lightseagreen;
+    color:#fff;
+    border:none;
+}
+.region-conston > div{
+    float: left;
+    text-align: center;
+    border-radius: 4px;
+    background-color:#fff;
+    color:#000;
+    border: 1px solid #e1e1e1;
+    font-size:16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.region-title{
+    font-size: 16px;
+    padding: 5px;
+    line-height:25px;
+    /*font:italic arial,sans-serif;*/
+}
+.region-room .region-conston> div{
+    width: 25%;
+    height: 36px;
+    line-height: 36px;
+}
+.region-dual{
+    overflow:hidden;
+    border-bottom: 1px solid #eee;
+    padding-left: 4px;
+}
+.region-dual .reserved{
+    background-color:#c6c6c6;
+    color:#999;
+    border:none;
+}
+.region-dual .choosen{
+    background-color:lightseagreen;
+    color:#fff;
+    border:none;
+}
+.region-dual > div{
+    float: left;
+    text-align: center;
+    border-radius: 4px;
+    background-color:#fff;
+    color:#000;
+    border: 1px solid #e1e1e1;
+    font-size:16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 4px;
+    width: 30%;
+    height:36px;
+    line-height:36px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.region-theme{
+    border-bottom: 1px solid #eee;
+    display: inline-block;
+    float: left;
+    height: 10%;
+    width: 100%;
+}
+.themeinput{
+    text-align: left;
+    border-radius: 4px;
+    background-color:#fff;
+    color:#000;
+    /*border: 1px solid #e1e1e1;*/
+    font-size:16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 90%;
+    height:36px;
+    line-height: 36px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.inputtheme{
+    vertical-align: middle;
+    border: 1px solid #e1e1e1;
+    width: 70%;
+    font-size: 16px;
+}
+.region-manager{
+    display: inline-block;
+    border-bottom: 1px solid #eee;
+    float: left;
+    width: 100%;
+    height: 10%;
+}
+.radio-group{
+    text-align: left;
+    border-radius: 4px;
+    background-color:#fff;
+    color:#000;
+    /*border: 1px solid #e1e1e1;*/
+    font-size:16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 90%;
+    height:36px;
+    line-height: 36px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.button-Submit{
+    margin: 10px 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    width: 90%;
+    height: 36px;
+    background: lightseagreen;
+    color:#eee;
+    font-size: 18px;
+}
+
+

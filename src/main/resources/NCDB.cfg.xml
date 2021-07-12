@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+
+<!--</beans>-->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- oracle -->
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@10.0.28.18:1521:NCDB</property>
+        <property name="hibernate.connection.username">ps_wh</property>
+        <property name="hibernate.connection.password">wh_ps2020</property>
+        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="hibernate.jdbc.use_scrollable_resultset">false</property>
+        <!-- clob -->
+        <property name="hibernate.jdbc.use_streams_for_binary">true</property>
+        <property name="hibernate.connection.SetBigStringTryClob">true</property>
+        <property name="hibernate.jdbc.batch_size">0</property>
+        <!--hibernate.current_session_context_class=thread-->
+
+        <!-- mysql-->
+        <!--<property name="hibernate.bytecode.use_reflection_optimizer">false</property>-->
+        <!--<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>-->
+        <!--<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/fhkgportal?autoReconnect=true</property>-->
+        <!--&lt;!&ndash;<property name="hibernate.connection.url">jdbc:mysql://10.0.125.17:3306/fhkgportal?autoReconnect=true</property>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="hibernate.connection.url">jdbc:mysql://101.200.88.166:3306/fhkg1215</property>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="hibernate.connection.url">jdbc:mysql://101.200.88.166:3306/fhkg1215?autoReconnect=true</property>&ndash;&gt;-->
+        <!--<property name="hibernate.connection.username">root</property>-->
+        <!--<property name="hibernate.connection.password">root</property>-->
+        <!--<property name="dialect">org.hibernate.dialect.MySQLDialect</property>-->
+
+        <!--<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>-->
+        <!--<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>-->
+        <property name="hibernate.c3p0.min_size">8</property>
+        <property name="hibernate.c3p0.max_size">200</property>
+        <property name="hibernate.c3p0.timeout">600</property>
+        <property name="hibernate.c3p0.max_statements">0</property>
+        <property name="hibernate.c3p0.idle_test_period">60</property>
+        <property name="hibernate.c3p0.acquire_increment">2</property>
+        <property name="hibernate.c3p0.validate">true</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">5</property>
+
+        <!-- Disable the second-level cache  -->
+        <!--<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>-->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</property>
+        <!--<property name="hibernate.cache.use_second_level_cache">true</property>-->
+        <!--<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>-->
+
+        <!--<property name="hibernate.cache.use_query_cache">true</property>-->
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- <property name="format_sql">true</property> -->
+
+        <!-- Drop and re-create the database schema on startup -->
+        <!--<property name="hbm2ddl.auto">validate</property>-->
+
+        <!-- Names the annotated entity class -->
+        <!--<mapping class="com.wxx.conference.model.booking.region"/>-->
+        <!--<mapping class="com.wxx.conference.model.booking.bookingRegion"/>-->
+        <!--<mapping class="com.wxx.conference.model.booking.regionDual"/>-->
+        <!--<mapping class="com.wxx.conference.model.booking.user"/>-->
+        <!--<mapping class="com.wxx.conference.model.boardRoomManagement.boardRoomDevice"/>-->
+        <!--<mapping class="com.wxx.conference.model.portal.OrgMember"/>-->
+        <!--<mapping class="com.wxx.conference.model.portal.OrgUnit"/>-->
+        <mapping class="com.wxx.conference.model.NC.view_ps_customer_afterrecord"/>
+
+    </session-factory>
+</hibernate-configuration>

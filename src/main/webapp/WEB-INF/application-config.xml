@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Uncomment and addOrgTree your base-package here:
+         <context:component-scan
+            base-package="org.springframework.samples.service"/>  -->
+	<!-- 引入redis配置 -->
+	<context:property-placeholder location="classpath:redis.properties" ignore-unresolvable="true" />
+	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<!-- 控制一个pool可分配多少个jedis实例 -->
+		<property name="maxTotal" value="100" />
+		<!-- 连接池中最多可空闲maxIdle个连接 ，这里取值为20，表示即使没有数据库连接时依然可以保持20空闲的连接，而不被清除，随时处于待命状态。 -->
+		<property name="maxIdle" value="50" />
+		<!-- 最大等待时间:当没有可用连接时,连接池等待连接被归还的最大时间(以毫秒计数),超过时间则抛出异常 -->
+		<property name="maxWaitMillis" value="1500" />
+		<!-- 在获取连接的时候检查有效性 -->
+		<property name="testOnBorrow" value="true" />
+	</bean>
+	<!--  创建jedisPoolWriper类 构造函数注入属性文件-->
+	<bean id="jedisPoolWriper" class="com.wxx.conference.util.JedisPoolWriper">
+		<constructor-arg index="0" ref="jedisPoolConfig"></constructor-arg>
+		<!--<constructor-arg index="1" value="127.0.0.1" ></constructor-arg>-->
+		<constructor-arg index="1" value="10.0.125.110" ></constructor-arg>
+		<constructor-arg index="2" value="6379" type="int"></constructor-arg>
+		<constructor-arg index="3" value="1500"></constructor-arg>
+		<constructor-arg index="4" value="123456"></constructor-arg>
+	</bean>
+	<!-- 创建工具类，注入jedisPoolWriper -->
+	<bean id="jedisUtil" class="com.wxx.conference.util.JedisUtil" scope="singleton">
+		<property name="jedispool" ref="jedisPoolWriper"></property>
+	</bean>
+</beans>

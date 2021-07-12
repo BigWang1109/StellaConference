@@ -1,0 +1,79 @@
+.container{
+    font-size: 0.29rem;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+a:link{color:#000000}
+a:visited{color:#000000}
+a:hover{color:#000000}
+a:active{color:#000000}
+ul{
+    padding-left: 0;
+}
+ul li{
+    list-style-type: none;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border-bottom: 1px solid #999;
+}
+ul>li>span{
+    margin: 0 0.3rem;
+    color: #606060;
+}
+ul>li>input[type=checkbox]{
+    margin: 0.12rem auto;
+    /*background: #38adff;*/
+}
+ul > li > a{
+    display: block;
+    overflow: hidden;
+    /*font-size: 0.24rem;*/
+    background: url("../../images/icon/add.png") left center no-repeat;
+    background-size: auto 0.4rem;
+    text-decoration: none;
+    /*padding-right: 0.15rem;*/
+    padding-left: 0.7rem;
+    color: #606060;
+}
+.sbutton{
+    width: 16%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    font-size: 0.25rem;
+    float: right;
+    border:1px solid #eee;
+    border-radius: 0.1rem;
+    vertical-align: middle;
+    background: #eee;
+    margin: 0.14rem auto;
+}
+.editButton{
+    margin-right: 0.28rem;
+}
+.delButton{
+    margin-right: 0.12rem;
+}
+.button-group{
+    position: fixed;
+    width: 100%;
+    left: 0.12rem;
+    z-index: 105;
+    bottom: 0.12rem;
+}
+.bbutton{
+    width: 42%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    background: #38adff;
+    border: 1px solid #38adff;
+    border-radius: 10px;
+    font-size: 0.3rem;
+    color: #eee;
+    margin:auto 0.2rem;
+}
+.cancelButton{
+    background: #eee;
+    border: 1px solid #999;
+    color: #000000;
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+
+<!--</beans>-->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- sqlserver -->
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <!--正式-->
+        <property name="hibernate.connection.url">jdbc:sqlserver://10.0.59.10:1433;DatabaseName=hrtest</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password">sa</property>
+        <!--测试-->
+        <!--<property name="hibernate.connection.url">jdbc:oracle:thin:@10.4.8.12:1521:orcl</property>-->
+        <!--<property name="hibernate.connection.username">zgfhnc65_0510</property>-->
+        <!--<property name="hibernate.connection.password">1</property>-->
+        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.jdbc.use_scrollable_resultset">false</property>
+        <!-- clob -->
+        <property name="hibernate.jdbc.use_streams_for_binary">true</property>
+        <property name="hibernate.connection.SetBigStringTryClob">true</property>
+        <property name="hibernate.jdbc.batch_size">0</property>
+        <!-- oracle -->
+        <!--<property name="hibernate.bytecode.use_reflection_optimizer">false</property>-->
+        <!--<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>-->
+        <!--&lt;!&ndash;正式&ndash;&gt;-->
+        <!--<property name="hibernate.connection.url">jdbc:oracle:thin:@10.0.25.53:1521:oabi</property>-->
+        <!--<property name="hibernate.connection.username">zgfh_card</property>-->
+        <!--<property name="hibernate.connection.password">psndoc2020</property>-->
+        <!--&lt;!&ndash;测试&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="hibernate.connection.url">jdbc:oracle:thin:@10.4.8.12:1521:orcl</property>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="hibernate.connection.username">zgfhnc65_0510</property>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="hibernate.connection.password">1</property>&ndash;&gt;-->
+        <!--<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>-->
+        <!--<property name="hibernate.jdbc.use_scrollable_resultset">false</property>-->
+        <!--&lt;!&ndash; clob &ndash;&gt;-->
+        <!--<property name="hibernate.jdbc.use_streams_for_binary">true</property>-->
+        <!--<property name="hibernate.connection.SetBigStringTryClob">true</property>-->
+        <!--<property name="hibernate.jdbc.batch_size">0</property>-->
+        <!--hibernate.current_session_context_class=thread-->
+
+        <property name="hibernate.c3p0.min_size">8</property>
+        <property name="hibernate.c3p0.max_size">200</property>
+        <property name="hibernate.c3p0.timeout">600</property>
+        <property name="hibernate.c3p0.max_statements">0</property>
+        <property name="hibernate.c3p0.idle_test_period">60</property>
+        <property name="hibernate.c3p0.acquire_increment">2</property>
+        <property name="hibernate.c3p0.validate">true</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">5</property>
+
+        <!-- Disable the second-level cache  -->
+        <!--<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>-->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</property>
+        <!--<property name="hibernate.cache.use_second_level_cache">true</property>-->
+        <!--<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>-->
+
+        <!--<property name="hibernate.cache.use_query_cache">true</property>-->
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- <property name="format_sql">true</property> -->
+
+        <!-- Drop and re-create the database schema on startup -->
+        <!--<property name="hbm2ddl.auto">validate</property>-->
+
+        <!-- Names the annotated entity class -->
+        <!--<mapping class="com.wxx.conference.model.booking.region"/>-->
+        <!--<mapping class="com.wxx.conference.model.booking.bookingRegion"/>-->
+        <!--<mapping class="com.wxx.conference.model.booking.regionDual"/>-->
+        <!--<mapping class="com.wxx.conference.model.booking.user"/>-->
+        <!--<mapping class="com.wxx.conference.model.boardRoomManagement.boardRoomDevice"/>-->
+        <!--<mapping class="com.wxx.conference.model.portal.OrgMember"/>-->
+        <!--<mapping class="com.wxx.conference.model.portal.OrgUnit"/>-->
+        <!--<mapping class="com.wxx.conference.model.HR.ZGFH_BI_TEST_PHOTO"/>-->
+
+    </session-factory>
+</hibernate-configuration>

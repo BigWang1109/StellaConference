@@ -1,0 +1,128 @@
+.container{
+    display: block;
+    width: 100%;
+    height: 800px;
+    border: 0;
+}
+.header{
+    height: 80px;
+    width: 100%;
+    background:#0097cf;
+}
+.header .header-left{
+    display: inline-block;
+    position: relative;
+    left: 60px;
+    top: 30px;
+    bottom: 10px;
+}
+.header .header-left .logo{
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    padding: 0 15px 0 0;
+}
+.header-right{
+    display: inline-block;
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    bottom: 10px;
+}
+.header .header-right .account{
+    color: #fff;
+}
+.header .header-right .quit_btn{
+    border:1px solid rgba(0,140,238,.72);
+    background: #38adff;
+    color: #fff;
+    border-radius: 5px;
+    width: 110px;
+    height: 34px;
+    font-size: 16px;
+}
+.header .title{
+    color: #fff;
+}
+.container .main{
+    height: 400px;
+    width: 100%;
+}
+.app_group{
+    /*text-align: center;*/
+    padding-top: 50px;
+}
+/*.app{*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*background: #0097cf;*/
+    /*margin-bottom: 20px;*/
+    /*float: left;*/
+    /*padding: 20px;*/
+    /*margin: 20px;*/
+/*}*/
+.app{
+    padding: 15px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 14px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    vertical-align: top;
+    background-position: 50% 10px;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.05);
+    background-color: #fff;
+}
+/*.app a{*/
+    /*text-decoration: none;*/
+    /*font-weight: 100;*/
+    /*color: mintcream;*/
+    /*vertical-align: middle;*/
+    /*/!*padding: 30px 30px 30px 30px;*!/*/
+    /*font-size: 30px;*/
+/*}*/
+/*.app_icon{*/
+    /*padding: 35px;*/
+/*}*/
+.app_icon{
+    margin: 32px auto 0;
+    background-size: auto 100%;
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    vertical-align: middle;
+}
+.no_app_icon {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    background-color: #006d91;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 36px;
+}
+.app_name{
+    padding-top: 20px;
+}
+.app p {
+    min-width: 142px;
+    font-size: 1.1em;
+    opacity: .7;
+    margin: 5px auto 0;
+    line-height: 1.25em;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+body{
+    background-color: #e8ebeb;
+}

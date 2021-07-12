@@ -1,0 +1,129 @@
+.container{
+    display: block;
+    text-align: left;
+    /*background:grey;*/
+    font-size: 0.29rem;
+    width: 100%;
+    color: #606060;
+}
+ul li{
+    list-style-type: none;
+}
+input[type=text],textarea{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    outline: none;
+    background-color:transparent;
+    -webkit-tap-highlight-color:rgba(255,255,255,0);/*点击后背景高亮处理*/
+    font-size: 0.24rem;
+    border: none;
+}
+textarea{
+    /*line-height: 0.8rem;*/
+    /*padding-left:0.3rem;*/
+    /*padding-top: 0.3rem;*/
+    position: absolute;
+    left: 1.8rem;
+    margin: 0.2rem auto;
+}
+a:link{color:#000000}
+a:visited{color:#000000}
+a:hover{color:#000000}
+a:active{color:#000000}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #A9A9A9;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #A9A9A9;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #A9A9A9;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #A9A9A9;
+}
+.list > ul{
+    /*padding-left: 0.16rem;*/
+    padding-left: 0;
+    border:1px solid #999;
+}
+.list > ul > li{
+    /*border-bottom: 1px solid #999;*/
+    padding-right: 0.16rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+}
+.list > ul > li > a{
+    display: block;
+    overflow: hidden;
+    font-size: 0.29rem;
+    background: url("../../images/icon/nav_fanhui_grey.png") right center no-repeat;
+    background-size: auto 0.25rem;
+    text-decoration: none;
+    padding-right: 0.25rem;
+    padding-left: 0.15rem;
+    color: #606060;
+}
+.list > ul > li > span{
+    /*position: absolute;*/
+    /*left: 0.8rem;*/
+    padding-left: 0.15rem;
+}
+.list > ul > li > input{
+    border:none;
+    width: 70%;
+    /*padding-left: 0.3rem;*/
+    position: absolute;
+    left: 1.8rem;
+    margin: 0.2rem auto;
+    font-size: 0.24rem;
+    vertical-align: middle;
+}
+.list > ul > li > a > span{
+    float: right;
+    color: #A9A9A9;
+}
+.row{
+    background:	#FFFFFF;
+}
+.row1 >ul li:first-child{
+    height: 1.2rem;
+    line-height: 1.2rem;
+    border-bottom: 1px solid #999;
+}
+.row2 >ul li:first-child{
+    border-bottom: 1px solid #999;
+}
+.row3{
+
+}
+
+.row4 >ul li:not(:last-child){
+    border-bottom: 1px solid #999;
+}
+.row4 >ul li:last-child{
+    height: 2.5rem;
+    /*line-height: 2.5rem;*/
+}
+.row4 >ul li:last-child > span{
+    vertical-align: top;
+}
+
+.row5{
+
+}
+.row6{
+    padding-left:0.3rem;
+}
+.row6 .saveButton{
+    width: 95%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    background: #38adff;
+    border: 1px solid #38adff;
+    border-radius: 10px;
+    font-size: 0.32rem;
+    color: #eee;
+}

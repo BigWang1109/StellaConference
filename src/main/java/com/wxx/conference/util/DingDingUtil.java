@@ -28,10 +28,10 @@ import java.util.Formatter;
  */
 public class DingDingUtil {
 
-    private static final String appId = "dingoav1wmfsmqapy5pb28";
-    private static final String Secret = "HzyhchCW401h9Gh08GwnVRzklY6OroJurtVjkMULoOg1SnvnUtIkYIdpfW8BSuxc";
-    private static final String appKey = "dingtpme6oisoz0zswhp";
-    private static final String appSecret = "jiTx_BhtoFs5dNhpe0XtK9LWVXzRt1JyCIeUmETBqG2Sxk7MU0tR-PIHN8BQuSwg";
+    private static final String appId = "###";
+    private static final String Secret = "###";
+    private static final String appKey = "###";
+    private static final String appSecret = "###";
     public static void main(String[] args) {
         try{
 //            getUserInfo();
